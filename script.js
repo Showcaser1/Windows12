@@ -3,9 +3,8 @@ let windows = {};
 let taskbarIcons = document.getElementById('taskbarIcons');
 
 document.addEventListener("DOMContentLoaded", () => {
-    // Store windows in an object for easy reference
-    windows.window1 = document.getElementById('window1');
-    windows.window2 = document.getElementById('window2');
+    windows.myDocuments = document.getElementById('myDocuments');
+    windows.calculator = document.getElementById('calculator');
     windows.startMenu = document.getElementById('startMenu');
     windows.taskbarIcons = taskbarIcons;
 });
@@ -81,7 +80,7 @@ function removeTaskbarButton(windowId) {
     });
 }
 
-// Make window draggable
+// Enable window dragging
 function enableWindowDrag(window) {
     const header = window.querySelector('.window-header');
     
