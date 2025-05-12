@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Windows PC Simulation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Taskbar -->
+    <div class="taskbar">
+        <button class="start-btn" onclick="toggleStartMenu()">Start</button>
+        <div class="taskbar-icons" id="taskbarIcons"></div>
+    </div>
+
+    <!-- Start Menu -->
+    <div class="start-menu" id="startMenu">
+        <ul>
+            <li onclick="openWindow('window1')">App 1</li>
+            <li onclick="openWindow('window2')">App 2</li>
+            <li>Shut Down</li>
+        </ul>
+    </div>
+
+    <!-- Window 1 -->
+    <div class="window" id="window1">
+        <div class="window-header">
+            <button class="close-btn" onclick="closeWindow('window1')">X</button>
+            <button class="minimize-btn" onclick="minimizeWindow('window1')">_</button>
+            <button class="maximize-btn" onclick="maximizeWindow('window1')">□</button>
+            <p>Window 1</p>
+        </div>
+        <div class="window-body">
+            <p>This is App 1</p>
+        </div>
+    </div>
+
+    <!-- Window 2 -->
+    <div class="window" id="window2">
+        <div class="window-header">
+            <button class="close-btn" onclick="closeWindow('window2')">X</button>
+            <button class="minimize-btn" onclick="minimizeWindow('window2')">_</button>
+            <button class="maximize-btn" onclick="maximizeWindow('window2')">□</button>
+            <p>Window 2</p>
+        </div>
+        <div class="window-body">
+            <p>This is App 2</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+  </html>
